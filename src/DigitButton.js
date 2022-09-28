@@ -1,9 +1,11 @@
-import React from 'react'
+import { ACTIONS } from "./App"
 
-function DigitButton() {
+export default function DigitButton({ dispatch, digit }) {
   return (
-    <div>DigitButton</div>
+    <button
+      onClick={() => dispatch({ type: ACTIONS.ADD_DIGIT, payload: { digit } })}
+    >
+      {digit}
+    </button>
   )
 }
-
-export default DigitButton
